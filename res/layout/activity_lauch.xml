@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="4"
+    android:orientation="vertical"
+    android:background="#f2f1ef" >
+
+  
+    <ImageView 
+        android:id="@+id/ad_image"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:scaleType="fitXY"
+        android:background="#f2f1ef"
+        />
+    
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingTop="50dp"
+        android:paddingLeft="30dp"
+        >
+           <ImageView
+	        android:layout_width= "wrap_content"
+	        android:layout_height= "wrap_content"
+	        android:src= "@drawable/launch_dongfeng"
+	        android:layout_marginTop="2dp"
+	        />
+        
+           <LinearLayout 
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:paddingLeft="8dp"
+	      
+            >
+              <TextView
+                      android:id="@+id/lauch_dongfeng"
+                      android:layout_width= "wrap_content"
+                      android:layout_height= "wrap_content"
+                      android:textColor= "#333333"
+                      android:textSize= "28sp"                    
+                      android:text= "@string/lauch_dongfeng"
+                        />
+               
+		            
+		                        <LinearLayout 
+						            android:layout_width="fill_parent"
+							        android:layout_height="wrap_content"
+							        android:orientation="horizontal"
+							        android:paddingTop="1dp"   						     							        
+							        android:weightSum="8"							     							      
+						            >
+						             <TextView
+				                      android:id="@+id/lauch_platform1"		    
+				                      android:layout_width= "wrap_content"
+				                      android:layout_height= "wrap_content"				                     
+				                      android:textColor= "#909090"                     
+				                      android:textSize ="9sp" 
+				                      android:gravity="center"  
+				                      android:layout_weight="1" 		                             
+				                      android:text= "@string/lauch_platform1"
+				                        />
+						             <TextView		    
+				                      android:layout_width= "wrap_content"
+				                      android:layout_height= "wrap_content"				                  
+				                      android:textColor= "#909090"                     
+				                      android:textSize ="9sp" 	
+				                      android:gravity="center"         
+				                      android:text= "@string/lauch_platform2"
+				                      android:layout_weight="1"
+				                        />
+						              <TextView		    
+				                      android:layout_width= "wrap_content"
+				                      android:layout_height= "wrap_content"				                  
+				                      android:textColor= "#909090"                     
+				                      android:textSize ="9sp" 
+				                      android:gravity="center"     		                             
+				                      android:text= "@string/lauch_platform3"
+				                      android:layout_weight="1"
+				                        />
+						               <TextView		    
+				                      android:layout_width= "wrap_content"
+				                      android:layout_height= "wrap_content"				                  
+				                      android:textColor= "#909090"                     
+				                      android:textSize ="9sp" 		
+				                      android:gravity="center"                                  
+				                      android:text= "@string/lauch_platform4"
+				                      android:layout_weight="1"
+				                        />
+						                <TextView		    
+				                      android:layout_width= "wrap_content"
+				                      android:layout_height= "wrap_content"				                  
+				                      android:textColor= "#909090"                     
+				                      android:textSize ="9sp" 	
+				                      android:gravity="center"     	                             
+				                      android:text= "@string/lauch_platform5"
+				                      android:layout_weight="1"
+				                        />
+						                 <TextView		    
+				                      android:layout_width= "wrap_content"
+				                      android:layout_height= "wrap_content"				                  
+				                      android:textColor= "#909090"                     
+				                      android:textSize ="9sp" 
+				                      android:gravity="center"     		                             
+				                      android:text= "@string/lauch_platform6"
+				                      android:layout_weight="1"
+				                        />
+						                  <TextView		    
+				                      android:layout_width= "wrap_content"
+				                      android:layout_height= "wrap_content"				                  
+				                      android:textColor= "#909090"                     
+				                      android:textSize ="9sp" 
+				                      android:gravity="center"     		                             
+				                      android:text= "@string/lauch_platform7"
+				                      android:layout_weight="1"
+				                        />
+						              <TextView
+				                      android:id="@+id/lauch_platform8"			    
+				                      android:layout_width= "wrap_content"
+				                      android:layout_height= "wrap_content"
+				                      android:gravity="center"   
+				                      android:textColor= "#909090"                     
+				                      android:textSize ="9sp" 	
+				                      android:layout_weight="1"	                             
+				                      android:text= "@string/lauch_platform8"
+				                        />
+		                       </LinearLayout>
+		        
+                  </LinearLayout>
+    
+                     <TextView
+	                      android:id="@+id/lauch_phone"
+	                      android:layout_width= "wrap_content"
+	                      android:layout_height= "wrap_content"
+	                      android:textColor= "#D90526"
+	                      android:textSize= "12sp"
+	                      android:paddingLeft="8dp"
+	                      android:paddingTop="18dp"
+	                      android:text= "@string/lauch_phone"
+                      />
+        
+   </LinearLayout>
+   <LinearLayout 
+          android:layout_width="fill_parent"
+	      android:layout_height="wrap_content"
+	      android:gravity="center_horizontal"  
+       >       
+       <TextView 
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/lauch_copyright"
+	        android:textSize="8sp"
+	        android:layout_marginBottom="18dp"
+           />
+   </LinearLayout>
+</LinearLayout>
