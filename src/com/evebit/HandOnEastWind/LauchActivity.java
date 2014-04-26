@@ -117,10 +117,14 @@ public class LauchActivity extends Activity implements OnTouchListener, OnGestur
 	     //检测更新
 		 MobclickAgent.updateOnlineConfig(LauchActivity.this);	
 		 
-		 censor();
 		 
 		 checkPushOpen();
 		 checkPushSound();
+		 
+		 
+		 censor();
+		 
+		 
 	}
 	
 	
@@ -260,10 +264,11 @@ public class LauchActivity extends Activity implements OnTouchListener, OnGestur
 		String condition ="nid='" + "logo"+ "'";//搜索条件
 		List<DBSize> list = db.findAllByWhere(DBSize.class, condition);
 		if (list.size() == 0) {
+			Log.v(test, "--267-");
 			handler.sendEmptyMessage(3);
 		}
 		else {
-		//	Log.v(test, "--211--");
+			Log.v(test, "--271--");
 			File file = new File(ALBUM_PATH+LAUCH_mFileName);  
             if(file.exists())  
             {  

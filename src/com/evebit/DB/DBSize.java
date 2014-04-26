@@ -12,10 +12,10 @@ public class DBSize {
 	   }
 	   public String getNid() {
 		   return nid;
-		   }
-		   public void setNid(String nid) {
+	   }
+	   public void setNid(String nid) {
 		   this.nid = nid;
-		   }
+	   }
 	   public String getSize() {
 	   return size;
 	   }
