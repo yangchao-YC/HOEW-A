@@ -23,6 +23,17 @@ public class Test_Model {
 	   private String body_1;//图片格式详细内容
 	   private String body_2;//无图片格式详细内容
 
+	   private String node_changed;//时间戳
+	   
+	   
+	   public String getNode_changed() 
+	   {
+		   return node_changed;
+	   }
+	   public void setNode_changed(String node_changed)
+	   {
+		   this.node_changed = node_changed;
+	   }
 	   
 	   public String getId() {
 	   return nid;

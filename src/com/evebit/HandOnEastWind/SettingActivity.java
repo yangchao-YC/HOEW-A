@@ -65,8 +65,7 @@ public class SettingActivity extends Activity implements android.view.View.OnCli
 	  private TextView cacheTextView;//显示缓存
 	  private TableRow updateTableRow;//更新按钮
 	  private TableRow cacheTableRow,disclaimerRow,aboutTableRow;//更新按钮
-	  //private File cacheDir;  
-	  //private File fileDir;  
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub

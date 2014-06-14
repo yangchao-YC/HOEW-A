@@ -64,7 +64,7 @@
        android:maxLines="1"
        android:textSize="17sp"
        android:textColor="#424242"
-       android:text="张家超董事会召开"     
+       android:text="张家朝董事会召开"     
        /> 
        
       <TextView 

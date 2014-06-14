@@ -21,7 +21,7 @@ import com.evebit.json.DataManeger;
 import com.evebit.json.Test_Bean;
 import com.evebit.json.Test_Model;
 
-import android.R.integer;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -41,8 +41,7 @@ import android.os.Message;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.util.AttributeSet;
-import android.util.Log;
+
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -128,7 +127,7 @@ public class EastWindNewsActivity extends Activity  implements OnClickListener,I
         
         
 	    private int LoadPage = 0; //当前为哪个频道，0,1 为第一个频道，2,3,4,5、、、0代表第一次进入
-	    private int LookPage = 0; //当前的栏目id,
+	    private int LookPage = 0; //
 	    
 	    private boolean flag = true; //默认可以滑动
 	    private boolean Dialog =true;
@@ -246,11 +245,6 @@ public class EastWindNewsActivity extends Activity  implements OnClickListener,I
 
 		for (int i = 0; i < title.length; i++) {
 			TextView textView = new TextView(this);
-			
-			//String regEx="•";  
-	        // Pattern   p   =   Pattern.compile(regEx);     
-	       //  Matcher   m   =   p.matcher(title[i]);     	      					
-			
 	         if(title[i].length()==2){
 	        	 textView.setLayoutParams(new LayoutParams(H_width*3,LayoutParams.WRAP_CONTENT));
 	         }else if (title[i].length()==3) {
@@ -276,22 +270,15 @@ public class EastWindNewsActivity extends Activity  implements OnClickListener,I
 			
 			View view = new View(this);
 			LinearLayout.LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-			//layoutParams.width = 1;
-			//layoutParams.height = height - 40;
 			layoutParams.gravity = Gravity.CENTER;
 			view.setLayoutParams(layoutParams);
-			//view.setBackgroundColor(Color.GRAY);
 			linearLayout.addView(textView);
 			if (i != title.length - 1) {
 				linearLayout.addView(view);
 			}
-			//Log.e("aa", "linearLayout_width=" + linearLayout.getWidth());
 			for (int j = title.length; j < 12; j++) {
 				buttons.get(j).setVisibility(View.INVISIBLE);
 			}
-			
-			
-			
 		}
 	}
 
@@ -351,13 +338,9 @@ public class EastWindNewsActivity extends Activity  implements OnClickListener,I
 	      arrayArray.add(listData12);
 	      //默认为东风汽车报频道，此频道有9个栏目  
 
-
 	      time = Time();
 	      db = FinalDb.create(this);//实例化数据对象
-	      
 	      normal = new Normal(this);
-	     
-	      
 	      pageId = Integer.valueOf(getShared());
 	      
 	      switch (pageId) {
@@ -1570,7 +1553,6 @@ public class EastWindNewsActivity extends Activity  implements OnClickListener,I
 					dbUser.setBody_2(arrayArray.get(LookPage).get(i).get(LauchActivity.LAUCH_DATE_body_2));
 					db.save(dbUser);
 				}
-				
 			}
 			
 		}.start();

@@ -81,12 +81,13 @@ public class LauchActivity extends Activity implements OnTouchListener, OnGestur
 	   public static final String LAUCH_DATE_body_2 = "body_2"; 
 	   public static final String LAUCH_DATE_nid = "nid"; 
 	   public static final String LAUCH_DATE_page = "page"; 
+	   public static final String LAUCH_DATE_node_changed = "node_changed"; 
 	   
 	   //滑动选项卡
 	   GestureDetector mGestureDetector;  
 	   private static final int FLING_MIN_DISTANCE = 50;  
 	   private static final int FLING_MIN_VELOCITY = 0;  
-	   private String imgUrl = LAUCH_URL + "/mobile/adstart?nid=1136";//
+	   private String imgUrl = LAUCH_URL + "mobile/adstart?nid=1136";//
 	   private String image_Url = null;
 	   private String image_ID = null;
 	   private String image_dateID = null;
@@ -103,16 +104,14 @@ public class LauchActivity extends Activity implements OnTouchListener, OnGestur
 		 super.onCreate(savedInstanceState);
 		 setContentView(R.layout.activity_lauch);
 		 ad_ImageView = (ImageView)findViewById(R.id.ad_image);
-		 MobclickAgent.updateOnlineConfig(LauchActivity.this);
+		// MobclickAgent.updateOnlineConfig(LauchActivity.this);
 		 //滑动首页选项卡
 	     mGestureDetector = new GestureDetector(this);  
 		 LinearLayout ad=(LinearLayout)findViewById(R.id.ad);  
 		 ad.setOnTouchListener(this);  
 		 ad.setLongClickable(true);  
 	     Shared();
-		 //加载首页的广告图片
-	     //imgThread();     
-	     //UrlThread();
+
 	     db = FinalDb.create(this);
 	     //检测更新
 		 MobclickAgent.updateOnlineConfig(LauchActivity.this);	
@@ -274,6 +273,9 @@ public class LauchActivity extends Activity implements OnTouchListener, OnGestur
             {  
             	bitmap = BitmapFactory.decodeFile(ALBUM_PATH+LAUCH_mFileName);  
             }
+            else {
+            	UrlThread(4);
+			}
             image_dateID = list.get(0).getSize().toString();
             handler.sendEmptyMessage(1);
 		}
@@ -400,7 +402,8 @@ public class LauchActivity extends Activity implements OnTouchListener, OnGestur
 					for (Test_Model test_Model : datalist) {	
 					 //	Log.v("lauch---119", imgUrl);
 					 image_Url = test_Model.getField_thumbnails()==null? "": test_Model.getField_thumbnails();
-					 image_ID = test_Model.getNode_created()==null? "": test_Model.getNode_created();
+					 image_ID = test_Model.getNode_changed()==null? "": test_Model.getNode_changed();
+					 
 					}
 					handler.sendEmptyMessage(what);			
 				} catch (Exception e) {
